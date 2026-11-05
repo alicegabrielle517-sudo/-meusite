@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alice Gabrielle | Meu Primeiro Site</title>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f3f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background: linear-gradient(135deg, #17365d, #2675a8);
+    color: white;
+    padding: 40px 20px;
+}
+
+.perfil {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.perfil img {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.perfil h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.perfil p {
+    color: #e5edf5;
+}
+
+/* MENU */
+
+nav {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #f2c94c;
+    color: #17365d;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.secao {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.secao h2 {
+    color: #17365d;
+    font-size: 25px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #f2c94c;
+    padding-bottom: 8px;
+}
+
+.secao h3 {
+    color: #2675a8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.secao p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.secao ul {
+    margin-left: 25px;
+}
+
+.secao li {
+    margin-bottom: 8px;
+}
+
+.secao a {
+    color: #2675a8;
+    font-weight: bold;
+}
+
+/* DESTAQUE */
+
+.destaque {
+    background-color: #eaf2fa;
+    border-left: 5px solid #2675a8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.destaque p {
+    font-style: italic;
+    color: #17365d;
+}
+
+/* TABELA */
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    color: #17365d;
+    padding: 12px;
+}
+
+th {
+    background-color: #17365d;
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #edf3f8;
+}
+
+tbody tr:hover {
+    background-color: #fff4cc;
+}
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #17365d;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2675a8;
+}
+
+button {
+    background-color: #17365d;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2675a8;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil img {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+    }
+
+    .perfil h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px 4px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="perfil">
+
+            <img src="perfil.jpeg" alt="Foto de Alice Gabrielle">
+
+            <div>
+                <h1>Alice Gabrielle</h1>
+                <p>Estudante do Curso Técnico em Informática</p>
+                <p>IFS - Campus Tobias Barreto</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#horarios">Estudos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <!-- SOBRE MIM -->
+
+        <section id="sobre" class="secao">
+
+            <h2>Sobre mim</h2>
+
+            <p>
+                Oii! Meu nome é Alice Gabrielle. Sou estudante do
+                Curso Técnico em Informática do Instituto Federal
+                de Sergipe, no Campus Tobias Barreto.
+            </p>
+
+            <p>
+                Gosto de ouvir música, assistir séries, conhecer
+                coisas novas e aprender sobre tecnologia.
+                Escolhi a área de Informática porque tenho
+                interesse em descobrir como os sites, aplicativos
+                e sistemas funcionam.
+            </p>
+
+            <h3>O que quero aprender</h3>
+
+            <ul>
+                <li>HTML e CSS;</li>
+                <li>Desenvolvimento de sites;</li>
+                <li>Lógica de programação;</li>
+                <li>Criação de páginas para a internet.</li>
+            </ul>
+
+        </section>
+
+        <!-- OBJETIVOS -->
+
+        <section id="objetivos" class="secao">
+
+            <h2>Meus objetivos</h2>
+
+            <p>
+                Meu objetivo é concluir o curso técnico,
+                desenvolver minhas habilidades e adquirir
+                conhecimentos que contribuam para meu futuro
+                acadêmico e profissional.
+            </p>
+
+            <ul>
+                <li>Concluir o curso técnico em Informática;</li>
+                <li>Aprender novas linguagens de programação;</li>
+                <li>Desenvolver projetos próprios;</li>
+                <li>Conquistar oportunidades na área de tecnologia.</li>
+            </ul>
+
+            <div class="destaque">
+                <h3>Uma frase que me inspira</h3>
+
+                <p>
+                    "O futuro pertence àqueles que acreditam
+                    na beleza dos seus sonhos."
+                </p>
+            </div>
+
+            <p>
+                Conheça o
+                <a href="https://www.ifs.edu.br/" target="_blank">
+                    site oficial do Instituto Federal de Sergipe.
+                </a>
+            </p>
+
+        </section>
+
+        <!-- HORÁRIOS DE ESTUDO -->
+
+        <section id="horarios" class="secao">
+
+            <h2>Minha organização de estudos</h2>
+
+            <p>
+                Algumas atividades que fazem parte da minha
+                jornada de aprendizagem.
+            </p>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <caption>Planejamento semanal</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Atividade de estudo</th>
+                            <th>Objetivo</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Segunda-feira</td>
+                            <td>HTML</td>
+                            <td>Aprender estrutura de páginas</td>
+                        </tr>
+
+                        <tr>
+                            <td>Terça-feira</td>
+                            <td>CSS</td>
+                            <td>Estilizar sites</td>
+                        </tr>
+
+                        <tr>
+                            <td>Quarta-feira</td>
+                            <td>Lógica de programação</td>
+                            <td>Desenvolver raciocínio lógico</td>
+                        </tr>
+
+                        <tr>
+                            <td>Quinta-feira</td>
+                            <td>Desenvolvimento Web</td>
+                            <td>Praticar criação de sites</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sexta-feira</td>
+                            <td>Revisão</td>
+                            <td>Revisar os conteúdos aprendidos</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+
+        <section id="contato" class="secao">
+
+            <h2>Fale comigo</h2>
+
+            <p>
+                Obrigada por visitar meu primeiro site!
+                Deixe uma mensagem.
+            </p>
+
+            <form>
+
+                <label for="nome">Seu nome:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+                <label for="mensagem">Sua mensagem:</label>
+
+                <textarea
+                    id="mensagem"
+                    rows="5"
+                    placeholder="Escreva sua mensagem"
+                    required
+                ></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            2026 - Alice Gabrielle
+        </p>
+
+        <p>
+            Meu primeiro site em HTML e CSS.
+        </p>
+
+        <p>
+            IFS - Campus Tobias Barreto
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
